@@ -99,10 +99,10 @@ install_dependencies() {
 # 安装依赖
 install_dependencies
 
-
-
 if [ "$OS_TYPE" = "Linux" ]; then
     PIP_INSTALL="pip3 install --break-system-packages"
+elif [ "$OS_TYPE" = "Darwin" ]; then
+    PIP_INSTALL="pip3 install --user --break-system-packages"
 else
     PIP_INSTALL="pip3 install"
 fi
@@ -113,6 +113,10 @@ fi
 
 if ! pip3 show cryptography >/dev/null 2>&1; then
     $PIP_INSTALL cryptography
+fi
+
+if ! pip3 show pycryptodome >/dev/null 2>&1; then
+    $PIP_INSTALL pycryptodome
 fi
 
 # 使用 Poetry 管理 Python 依赖
