@@ -18,6 +18,7 @@
 - ![Windows](https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white)
 - ![macOS](https://img.shields.io/badge/-macOS-000000?logo=apple&logoColor=white)
 - ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
+- ![WSL](https://img.shields.io/badge/-WSL-0078D6?logo=windows&logoColor=white) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➡️[如何在 Windows 上安装 WSL2](https://medium.com/@cryptoguy_/在-windows-上安装-wsl2-和-ubuntu-a857dab92c3e)
 
 ## ⚙️ 系统要求
 
@@ -28,18 +29,18 @@
 
 ## 🛡️ 安装依赖（支持多系统）
 
-### 🔴Linux、WSL、macOS 系统
-请在终端执行以下命令（确保你已经安装了git）：
+### 🔴Linux、WSL、macOS 用户
+确保你已安装 `git`，如果未安装请参考➡️[安装git教程](./安装git教程.md)
 
 ```bash
-git clone https://github.com/oxmoei/BinanceAlpha.git && cd BinanceAlpha && chmod +x install.sh && ./install.sh
+git clone https://github.com/oxmoei/BinanceAlpha.git && cd BinanceAlpha && ./install.sh
 ```
 
-### 🔴Windows 系统
-
-请以管理员身份启动 PowerShell，依次执行以下命令（确保你已经安装了git）：
+### 🔴Windows 用户
+确保你已安装 `git`，如果未安装请参考➡️[安装git教程](./安装git教程.md)
 
 ```powershell
+# 请以管理员身份启动 PowerShell，依次执行以下命令
 Set-ExecutionPolicy Bypass -Scope CurrentUser
 git clone https://github.com/oxmoei/BinanceAlpha.git
 cd BinanceAlpha
@@ -48,7 +49,7 @@ cd BinanceAlpha
 
 ## 📝 配置环境变量`.env`文件：
 
-```
+```env
 WEBHOOK_URL=your_webhook_url_here
 DEEPSEEK_API_KEY=your_api_key_here
 ```
